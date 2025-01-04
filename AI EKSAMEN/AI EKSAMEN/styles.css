@@ -1,0 +1,369 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  background-color: #F7F2DE;
+  color: #0B0A08;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Sørger for at hamburgermenyen, logoen og 0-tallet har riktig plassering */
+  padding: 10px 20px;
+  background-color: #F7F2DE;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #0B0A08;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cart-icon {
+  font-size: 18px;
+  color: #0B0A08;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon span {
+  margin-left: 5px; /* Avstand mellom handlekurvikon og tallet */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Skjuler menyen */
+  width: 250px;
+  height: 100%;
+  background-color: #008F51;
+  padding: 20px;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  left: 0; /* Viser menyen */
+}
+
+.side-menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* Fikser grønn strek */
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #0B0A08; /* Endrer farge fra grønn til svart */
+}
+
+/* Intro Section */
+.intro {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+}
+
+.intro-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* Plasser elementene vertikalt */
+  align-items: center; /* Sentrer elementene horisontalt */
+  gap: 15px; /* Avstand mellom elementene */
+}
+
+.intro-overlay h1 {
+  font-size: 75px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.vertical-line-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 50px; /* Juster høyden */
+  background-color: white; /* Fargen på streken */
+  margin: 10px 0; /* Juster avstand fra teksten */
+}
+
+.intro-overlay p {
+  font-size: 20px;
+  margin: 0;
+}
+
+  
+  /* Shop Section */
+  .shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 20px 50px;
+    border-top: 2px solid #000000;
+    gap: 50px;
+  }
+  
+  .vertical-line {
+    width: 2px;
+    background-color: #E63946;
+    height: auto;
+  }
+  
+  .shop-item {
+    text-align: center;
+  }
+  
+  .shop-item img {
+    width: 448px;
+    height: 327px;
+    object-fit: cover;
+  }
+  
+  /* Section: How It Works */
+  .how-it-works-container {
+    display: flex;
+    flex-direction: row;
+    padding: 50px 10%;
+    gap: 50px;
+  }
+  
+  .how-it-works-left {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .how-it-works-right {
+    flex: 3;
+  }
+  
+  .how-it-works-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #000;
+    padding: 20px 0;
+  }
+  
+  .how-it-works-item:last-child {
+    border-bottom: none; /* Fjerner streken på siste element */
+  }
+  
+  .how-it-works-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .how-it-works-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .how-it-works-link {
+    color: #E63946;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  
+/* Popular Products Section */
+.product-grid {
+  display: flex;
+  justify-content: space-between; /* Sørg for jevn avstand mellom elementene */
+  align-items: flex-start; /* Juster produktene i høyden */
+  gap: 29px; /* 29px mellom hver kolonne */
+  padding: 0 45px; /* 45px på venstre og høyre side */
+  margin: auto; /* Sentrer grid i midten */
+  max-width: calc(455px * 3 + 29px * 2 + 90px); /* Sørg for riktig layoutbredde */
+}
+
+.products h2 {
+  font-size: 36px; /* Juster størrelse */
+  font-weight: bold;
+  color: #1B1A1E; /* Mørk tekstfarge */
+  text-transform: uppercase; /* Store bokstaver */
+  text-align: left; /* Venstrejuster */
+  margin-bottom: 90px; /* 90px avstand til produktgrid */
+  padding-left: 45px; /* Juster innrykk for overskriften */
+}
+
+
+.product {
+  width: 455px; /* Fast bredde */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative; /* For knappen inni bildet */
+}
+
+/* Container holding the image and the button */
+.container {
+    position: relative;
+    width: 100%; /* Gjør at bildet fyller produktbeholderen */
+}
+
+.container img {
+  width: 100%;
+  height: 432px; /* Fast høyde */
+  object-fit: cover;
+  border-radius: 8px; /* Runde hjørner */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Myk skygge */
+}
+
+/* "Add to basket"-knappen plassert nederst til høyre */
+.bottom-right {
+    position: absolute;
+    bottom: 8px; /* Avstand fra bunnen */
+    right: 16px; /* Avstand fra høyre kant */
+    background: rgba(0, 0, 0, 0.8); /* Svart bakgrunn */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bottom-right:hover {
+    background-color: rgba(0, 0, 0, 1); /* Lysere svart ved hover */
+}
+
+.product-title {
+  margin-top: 18px; /* 18px fra bunnen av bildet */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-price {
+  margin-top: 12px; /* 12px fra tittelen */
+  font-size: 16px;
+  color: rgba(27, 26, 30, 0.8); /* Lett grå tekst */
+}
+
+.product-weight {
+  margin-top: 12px; /* 12px fra prisen */
+  font-size: 16px;
+  color: rgba(27, 26, 30, 0.8); /* Lett grå tekst */
+}
+
+.products {
+  margin-bottom: 90px; /* 90px avstand til neste seksjon */
+}
+
+.add-to-basket {
+  position: absolute;
+  bottom: 10px; /* Litt avstand fra bunnen av bildet */
+  right: 10px; /* Litt avstand fra høyre kant */
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 22px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-basket:hover {
+  background-color: rgba(0, 0, 0, 1); /* Lysere svart ved hover */
+}
+  
+  /* Footer Section */
+  footer {
+    background-color: #E63946;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  footer h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  footer input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  footer button {
+    background-color: #FFFFFF;
+    color: #E63946;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  footer button:hover {
+    background-color: #F2F2F2;
+  }
