@@ -8,10 +8,11 @@ body {
 
 
 /* Header */
+/* Header */
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Sørger for at hamburgermenyen, logoen og 0-tallet har riktig plassering */
+  justify-content: space-between; /* Plasserer elementene riktig */
   padding: 10px 20px;
   background-color: #F7F2DE;
   position: fixed;
@@ -36,16 +37,26 @@ header {
 }
 
 .cart-icon {
-  font-size: 18px;
-  color: #0B0A08;
-  display: flex;
-  align-items: center;
+  position: relative; /* Viktig for absolutt posisjonering av sirkelen */
+  margin-right: 30px; /* Litt avstand fra høyrekanten */
 }
 
-.cart-icon span {
-  margin-left: 5px; /* Avstand mellom handlekurvikon og tallet */
-  font-size: 18px;
+.cart-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* Diameteren til sirkelen */
+  height: 32px; /* Diameteren til sirkelen */
+  background-color: #008F51; /* Grønn bakgrunn */
+  color: rgb(0, 0, 0); /* Hvit tekst */
+  border-radius: 50%; /* Gjør den til en sirkel */
+  font-size: 16px;
   font-weight: bold;
+  position: absolute; /* For presis posisjonering */
+  top: 50%; /* Flytt ned til midten */
+  right: 0; /* Plasser til høyre */
+  transform: translateY(-50%); /* Sentrer vertikalt */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Gir en myk skygge */
 }
 
 .side-menu {
