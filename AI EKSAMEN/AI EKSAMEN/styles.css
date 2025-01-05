@@ -190,53 +190,61 @@ header {
   }
   
   /* Section: How It Works */
-  .how-it-works-container {
-    display: flex;
-    flex-direction: row;
-    padding: 50px 10%;
-    gap: 50px;
-  }
-  
-  .how-it-works-left {
-    flex: 1;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .how-it-works-right {
-    flex: 3;
-  }
-  
-  .how-it-works-item {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 2px solid #000;
-    padding: 20px 0;
-  }
-  
-  .how-it-works-item:last-child {
-    border-bottom: none; /* Fjerner streken på siste element */
-  }
-  
-  .how-it-works-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .how-it-works-description {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  
-  .how-it-works-link {
-    color: #E63946;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-  }
+.how-it-works-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* To create left and right sections */
+  gap: 20px; /* Avstand mellom kolonner */
+  padding: 50px 10%;
+  border-top: 2px solid #000; /* Top border */
+  border-bottom: 2px solid #000; /* Bottom border */
+}
+
+.how-it-works-left {
+  display: flex; /* Bruk flexbox */
+  flex-direction: column; /* Sørger for at teksten holder seg som én blokk */
+  justify-content: center; /* Vertikal sentrering */
+  align-items: center; /* Horisontal sentrering */
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-right: 2px solid #000; /* Divider mellom venstre og høyre seksjon */
+  padding-right: 20px; /* Litt avstand fra teksten til linjen */
+  text-align: center; /* Sørg for at teksten holder seg sentrert */
+}
+
+.how-it-works-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Avstand mellom seksjonene */
+}
+
+.how-it-works-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #000; /* Horisontal linje mellom elementer */
+}
+
+.how-it-works-item:last-child {
+  border-bottom: none; /* Fjern linjen for det siste elementet */
+}
+
+.how-it-works-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.how-it-works-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.how-it-works-link {
+  color: #E63946;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
 
   
 /* Popular Products Section */
