@@ -97,9 +97,15 @@ header {
 
 /* Intro Section */
 .intro {
-  position: relative;
-  text-align: center;
-  color: white;
+    position: relative;
+    background-image: url('images/landskap header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .header-image {
@@ -109,13 +115,14 @@ header {
 
 .intro-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column; /* Plasser elementene vertikalt */
-  align-items: center; /* Sentrer elementene horisontalt */
-  gap: 15px; /* Avstand mellom elementene */
+  color: var(--TrueWhite, #FFF);
+  text-align: center;
+  font-family: "Frank Ruhl Libre";
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .intro-overlay h1 {
@@ -137,20 +144,21 @@ header {
   margin: 10px 0; /* Juster avstand fra teksten */
 }
 
-.intro-overlay p {
-  font-size: 20px;
-  margin: 0;
-}
+  .intro-overlay p {
+    font-size: 20px;
+    margin: 0;
+  }
 
   
   /* Shop Section */
   .shop {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     padding: 100px 20px 50px;
     border-top: 2px solid #000000;
     gap: 50px;
+    background-color: white;
   }
   
   .vertical-line {
@@ -160,13 +168,27 @@ header {
   }
   
   .shop-item {
+    padding: 90px 0;
     text-align: center;
+    background-color: white;
   }
   
   .shop-item img {
     width: 448px;
     height: 327px;
     object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .shop-item h2 {
+    color: var(--Mole, #1B1A1E);
+    text-align: center;
+    font-family: Arimo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 100% */
+    text-transform: uppercase;
   }
   
   /* Section: How It Works */
@@ -372,6 +394,21 @@ header {
   footer button:hover {
     background-color: #F2F2F2;
   }
+
+ .buttons {
+  border-radius: 8px;
+  background: #DC4131;
+  width: 320px;
+  height: 44px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-color: #DC4131;
+  margin-bottom: auto;
+  margin-right: auto;
+  font-size: 16px;
+ } 
 
 
 /* CSS for Product Page */

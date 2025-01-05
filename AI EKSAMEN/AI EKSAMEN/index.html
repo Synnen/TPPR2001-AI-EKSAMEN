@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FRAM</title>
-    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Arimo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
       <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
@@ -17,7 +20,7 @@
         <span>0</span>
       </div>
     </header>
-    
+
     <div class="side-menu">
       <button class="close-btn">✕</button>
       <a href="#">Home</a>
@@ -25,121 +28,156 @@
       <a href="#">Chat</a>
       <a href="#">Checkout</a>
     </div>
-  
+
     <!-- Intro Section -->
     <section class="intro">
-      <img src="images/landskap header.jpg" alt="Header Image" class="header-image">
+      <img
+        src="images/landskap header.jpg"
+        alt="Header Image"
+        class="header-image"
+      />
       <div class="intro-overlay">
         <h1>FRAM</h1>
-        <div class="vertical-line-container">
-          <div class="vertical-line"></div>
-        </div>
+        <svg width="2" height="208" viewBox="0 0 2 208" fill="none" xmlns="http://www.w3.org/2000/svg" class="divider">
+          <path d="M1 0L1.00001 208" stroke="white" stroke-width="2"/>
+        </svg>
         <p>HOME DELIVERY FROM YOUR LOCAL FARMS</p>
       </div>
     </section>
-    
 
     <!-- Shop Section -->
     <section class="shop">
-        <div class="shop-item">
-            <h2>SHOP OUR SEASONAL SELECTION</h2>
-            <p class="accent-text">Updated every week</p>
-            <img src="images/grønnsaker.jpg" alt="Seasonal Selection">
-            <p>New produce is added continuously as time goes by and the seasons change.</p>
-            <button>Browse our selection</button>
+      <div class="shop-item">
+        <h2>SHOP OUR SEASONAL SELECTION</h2>
+        <p class="accent-text">Updated every week</p>
+        <img src="images/grønnsaker.jpg" alt="Seasonal Selection" />
+        <p>
+          New produce is added continuously as time goes by and the seasons
+          change.
+        </p>
+        <button class="buttons">Browse our selection</button>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="shop-item">
+        <h2>ASK US ABOUT ANYTHING</h2>
+        <p class="accent-text">All your questions answered</p>
+        <img src="images/bonde.jpg" alt="Ask Us" />
+        <p>
+          Get insights and answers to all your questions about our products and
+          services.
+        </p>
+        <button class="buttons" id="openChat">Go to Chat</button>
+
+        <div class="chat-popup" id="chatPopup">
+          <div class="chat-popup-header">
+            <span>AI Chatbot</span>
+            <button id="closeChat" class="close-button">✖</button>
+          </div>
+          <iframe
+            src="chatbot.html"
+            class="chat-iframe"
+            id="chatIframe"
+            title="AI Chatbot"
+          ></iframe>
         </div>
-        <div class="vertical-line"></div>
-        <div class="shop-item">
-            <h2>ASK US ABOUT ANYTHING</h2>
-            <p class="accent-text">All your questions answered</p>
-            <img src="images/bonde.jpg" alt="Ask Us">
-            <p>Get insights and answers to all your questions about our products and services.</p>
-            <button>Go to chat</button>
-        </div>
+      </div>
     </section>
 
     <!-- How It Works Section -->
     <section class="how-it-works">
       <div class="how-it-works-container">
-          <div class="how-it-works-title">
-              <h2>THIS IS HOW IT WORKS</h2>
+        <div class="how-it-works-title">
+          <h2>THIS IS HOW IT WORKS</h2>
+        </div>
+        <div class="how-it-works-content">
+          <div class="how-it-works-row">
+            <h3>ORDER GROCERIES</h3>
+            <p>
+              Fram is a circular service that ensures your kitchen is always
+              stocked with the essentials you need. Browse our seasonal
+              selection, choose your items, and place your order online.
+            </p>
+            <a href="#" class="link">See our stock here</a>
           </div>
-          <div class="how-it-works-content">
-              <div class="how-it-works-row">
-                  <h3>ORDER GROCERIES</h3>
-                  <p>Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. Browse our seasonal selection, choose your items, and place your order online.</p>
-                  <a href="#" class="link">See our stock here</a>
-              </div>
-              <div class="divider"></div>
-              <div class="how-it-works-row">
-                  <h3>STOCK UP</h3>
-                  <p>Once your order arrives, unpack the produce and store it however it works best for you. Hold onto the containers—they’re yours to keep until your next order.</p>
-              </div>
-              <div class="divider"></div>
-              <div class="how-it-works-row">
-                  <h3>SCAN & REORDER</h3>
-                  <p>Ready for a refill? Grab the containers from your last order and scan the QR code with our app or your phone’s camera. This instantly adds the items back to your cart, making reordering a breeze.</p>
-              </div>
-              <div class="divider"></div>
-              <div class="how-it-works-row">
-                  <h3>SWAP & REUSE</h3>
-                  <p>When we deliver your new order, simply leave your empty containers outside. We’ll pick them up, clean them thoroughly, and reuse them for future deliveries.</p>
-              </div>
+          <div class="divider"></div>
+          <div class="how-it-works-row">
+            <h3>STOCK UP</h3>
+            <p>
+              Once your order arrives, unpack the produce and store it however
+              it works best for you. Hold onto the containers—they’re yours to
+              keep until your next order.
+            </p>
           </div>
+          <div class="divider"></div>
+          <div class="how-it-works-row">
+            <h3>SCAN & REORDER</h3>
+            <p>
+              Ready for a refill? Grab the containers from your last order and
+              scan the QR code with our app or your phone’s camera. This
+              instantly adds the items back to your cart, making reordering a
+              breeze.
+            </p>
+          </div>
+          <div class="divider"></div>
+          <div class="how-it-works-row">
+            <h3>SWAP & REUSE</h3>
+            <p>
+              When we deliver your new order, simply leave your empty containers
+              outside. We’ll pick them up, clean them thoroughly, and reuse them
+              for future deliveries.
+            </p>
+          </div>
+        </div>
       </div>
-  </section>
-      
+    </section>
 
-  <div class="products">
-    <h2>POPULAR PRODUCE</h2>
-    <div class="product-grid">
-      <div class="product">
-        <div class="container">
-          <img src="images/havregryn.jpg" alt="Oats">
-          <div class="bottom-right add-to-basket">Add to basket</div>
+    <div class="products">
+      <h2>POPULAR PRODUCE</h2>
+      <div class="product-grid">
+        <div class="product">
+          <div class="container">
+            <img src="images/havregryn.jpg" alt="Oats" />
+            <div class="bottom-right add-to-basket">Add to basket</div>
+          </div>
+          <div class="product-title">Oats</div>
+          <div class="product-price">48 kr / kg</div>
+          <div class="product-weight">1 kg</div>
         </div>
-        <div class="product-title">Oats</div>
-        <div class="product-price">48 kr / kg</div>
-        <div class="product-weight">1 kg</div>
-      </div>
-      <div class="product">
-        <div class="container">
-          <img src="images/rødløk.jpg" alt="Red Onions">
-          <div class="bottom-right add-to-basket">Add to basket</div>
+        <div class="product">
+          <div class="container">
+            <img src="images/rødløk.jpg" alt="Red Onions" />
+            <div class="bottom-right add-to-basket">Add to basket</div>
+          </div>
+          <div class="product-title">Red Onions</div>
+          <div class="product-price">48 kr / kg</div>
+          <div class="product-weight">0.5 kg</div>
         </div>
-        <div class="product-title">Red Onions</div>
-        <div class="product-price">48 kr / kg</div>
-        <div class="product-weight">0.5 kg</div>
-      </div>
-      <div class="product">
-        <div class="container">
-          <img src="images/hvitløk.jpg" alt="Garlic">
-          <div class="bottom-right add-to-basket">Add to basket</div>
+        <div class="product">
+          <div class="container">
+            <img src="images/hvitløk.jpg" alt="Garlic" />
+            <div class="bottom-right add-to-basket">Add to basket</div>
+          </div>
+          <div class="product-title">Garlic</div>
+          <div class="product-price">48 kr / kg</div>
+          <div class="product-weight">0.2 kg</div>
         </div>
-        <div class="product-title">Garlic</div>
-        <div class="product-price">48 kr / kg</div>
-        <div class="product-weight">0.2 kg</div>
       </div>
     </div>
-  </div>
-  
-  
 
     <!-- Footer -->
     <footer>
-        <h3>STAY UPDATED</h3>
-        <p>Sign up for our newsletter to be the first to know about new produce or other exciting news!</p>
-        <form>
-            <input type="text" placeholder="First name">
-            <input type="email" placeholder="E-mail address">
-            <button type="submit">Send</button>
-        </form>
+      <h3>STAY UPDATED</h3>
+      <p>
+        Sign up for our newsletter to be the first to know about new produce or
+        other exciting news!
+      </p>
+      <form>
+        <input type="text" placeholder="First name" />
+        <input type="email" placeholder="E-mail address" />
+        <button type="submit">Send</button>
+      </form>
     </footer>
 
     <script src="script.js" defer></script>
-</body>
+  </body>
 </html>
-
-
-
-

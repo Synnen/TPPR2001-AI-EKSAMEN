@@ -1,0 +1,60 @@
+
+If the chatbot has its own HTML file, you can open it in a modal-like popup or iframe. Here's how to structure your project to integrate the chatbot while keeping its HTML in a separate file.
+
+File Structure
+Copy code
+project/
+├── index.html
+├── chatbot.html
+├── styles.css
+└── script.js
+index.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="openChat">Go to Chat</button>
+
+  <!-- Chat popup container -->
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-popup-header">
+      <span>AI Chatbot</span>
+      <button id="closeChat" class="close-button">✖</button>
+    </div>
+    <iframe src="chatbot.html" class="chat-iframe" id="chatIframe" title="AI Chatbot"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+chatbot.html
+This file will represent the chatbot UI. For now, it's a placeholder.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chatbot-container">
+    <h2>Welcome to the AI Chatbot!</h2>
+    <div id="chatMessages" class="chatbot-messages"></div>
+    <div class="chatbot-input">
+      <input type="text" id="userInput" placeholder="Type your message here...">
+      <button id="sendMessage">Send</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -58,4 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+
+
+// Chatbot
+document.addEventListener("DOMContentLoaded", () => {
+  const openChatButton = document.getElementById("openChat");
+  const closeChatButton = document.getElementById("closeChat");
+  const chatPopup = document.getElementById("chatPopup");
+
+  openChatButton.addEventListener("click", () => {
+    chatPopup.style.display = "block";
+  });
+
+  closeChatButton.addEventListener("click", () => {
+    chatPopup.style.display = "none";
+  });
+});
   
