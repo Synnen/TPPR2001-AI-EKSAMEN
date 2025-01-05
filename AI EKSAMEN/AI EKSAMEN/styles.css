@@ -141,19 +141,6 @@ header {
   margin: 0;
 }
 
-.vertical-line-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.vertical-line {
-  width: 2px;
-  height: 50px; /* Juster høyden */
-  background-color: white; /* Fargen på streken */
-  margin: 10px 0; /* Juster avstand fra teksten */
-}
-
   .intro-overlay p {
     font-size: 20px;
     margin: 0;
