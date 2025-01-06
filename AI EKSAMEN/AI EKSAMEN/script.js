@@ -60,6 +60,29 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Popular products generated:", popularProducts);
   }
 
+// === Handlekurv-funksjonalitet ===
+  let cart = [];
+
+  document.addEventListener("click", event => {
+    if (event.target.classList.contains("add-to-basket")) {
+      const productId = parseInt(event.target.dataset.id);
+      const product = products.find(p => p.id === productId);
+      const existingItem = cart.find(item => item.id === productId);
+
+      if (existingItem) {
+        existingItem.quantity += 1; // Øk mengden
+      } else {
+        cart.push({ ...product, quantity: 1 });
+      }
+      updateCartCount();
+    }
+  });
+
+  function updateCartCount() {
+    const cartCount = document.querySelector(".cart-count");
+    cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+  }
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
