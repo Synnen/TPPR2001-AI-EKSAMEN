@@ -139,8 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
         attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
 
-    L.marker([60.30384351384949, 10.63625125343083])
+     L.marker([60.30384351384949, 10.63625125343083])
         .addTo(map)
-        .bindPopup("Braastad Gård")
+        .bindPopup("Braastad Gård, Oppdalslinna 242, 2740 Roa")
         .openPopup();
 });
