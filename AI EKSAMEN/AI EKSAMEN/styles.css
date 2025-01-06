@@ -491,3 +491,171 @@ header {
 .product-page .add-to-basket:hover {
   background-color: rgba(0, 0, 0, 1); /* Lysere svart ved hover */
 }
+
+
+/* Partnering Farms Section */
+.partnering-farms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px 45px;
+  background-color: #f9f4e8;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0;
+  position: relative; /* Sørg for at seksjonen forholder seg til stacking context */
+  z-index: 1; /* Lavere enn headerens z-index */
+}
+
+.partnering-farms .text-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.partnering-farms .map-section #map {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Unngå overlapp */
+  z-index: 0; /* Kartet skal ligge lavere enn headeren */
+}
+
+#map {
+  width: 100%;
+  height: 400px; /* Juster høyden */
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 0; /* Sørg for at kartet ikke overlapper */
+}
+
+
+/* Footer */
+.footer {
+  background-color: #E63946;
+  color: white;
+  text-align: center;
+  padding: 20px 20px; /* Minimal padding */
+  margin-top: 0; /* Ingen ekstra avstand fra seksjon over */
+}
+
+
+/*CSS CHATBOT*/
+body.chatbot-page {
+  margin: 0;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  background-image: url('images/landskap header.jpg'); /* Sett riktig filsti til bildet */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh; /* Full høyde på skjermen */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 80px; /* Gir plass til headeren */
+}
+
+
+/* Chatbot-container */
+body.chatbot-page {
+  margin: 0;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  background-image: url('images/landskap header.jpg'); /* Sett riktig filsti til bildet */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh; /* Full høyde på skjermen */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 80px; /* Gir plass til headeren */
+  align-items: center;
+}
+
+/* Chatbot-vindu */
+.chatbot-window {
+  background-color: rgba(255, 255, 255, 0.9); /* Lett gjennomsiktig bakgrunn */
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px; /* Juster størrelsen på chatboten */
+  height: 70vh; /* Høyden for chatboten */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 20px; /* Sørger for at footeren er adskilt fra chatboten */
+}
+
+/* Chatbot Header */
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.chat-header h2 {
+  font-size: 24px;
+  color: #1B1A1E;
+}
+
+/* Chat area */
+.chat-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+/* Chat-meldingene */
+.chat-message {
+  margin-bottom: 15px;
+}
+
+.message-from {
+  font-weight: bold;
+}
+
+/* Input felt for melding */
+.chat-input-area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+textarea {
+  width: 80%;
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: none;
+}
+
+button.send-message {
+  width: 15%;
+  padding: 12px;
+  background-color: #DC4131;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.send-message:hover {
+  background-color: #E76A58;
+}
+
+
