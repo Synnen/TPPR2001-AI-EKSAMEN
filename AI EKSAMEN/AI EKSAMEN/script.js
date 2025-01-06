@@ -128,4 +128,19 @@ document.addEventListener("DOMContentLoaded", () => {
     chatPopup.style.display = "none";
   });
 });
-  
+
+
+  // Initialisering av Leaflet-kart,  third-party API//
+    console.log("Initializing map with coordinates:", [60.30384351384949, 10.63625125343083]);
+
+    const map = L.map("map").setView([60.30384351384949, 10.63625125343083], 10);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap contributors",
+    }).addTo(map);
+
+    L.marker([60.30384351384949, 10.63625125343083])
+        .addTo(map)
+        .bindPopup("Braastad Gård")
+        .openPopup();
+});
