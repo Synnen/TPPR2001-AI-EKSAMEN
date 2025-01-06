@@ -430,6 +430,14 @@ header {
   margin-bottom: 40px; /* Avstand til produktlisten */
 }
 
+.product-page .products p {
+  font-size: 16px; /* Juster fontstørrelse */
+  line-height: 1.6; /* Bedre lesbarhet */
+  color: #333; /* Tekstfarge */
+  text-align: left; /* Venstrejuster teksten */
+  margin-bottom: 10px; /* Avstand mellom paragrafene */
+}
+
 .product-page .product-list {
   display: grid; /* Bruk grid layout */
   grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
