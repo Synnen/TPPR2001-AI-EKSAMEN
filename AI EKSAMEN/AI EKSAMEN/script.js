@@ -113,24 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
-// Chatbot
-document.addEventListener("DOMContentLoaded", () => {
-  const openChatButton = document.getElementById("openChat");
-  const closeChatButton = document.getElementById("closeChat");
-  const chatPopup = document.getElementById("chatPopup");
-
-  openChatButton.addEventListener("click", () => {
-    chatPopup.style.display = "block";
-  });
-
-  closeChatButton.addEventListener("click", () => {
-    chatPopup.style.display = "none";
-  });
-});
-
-
-  // Initialisering av Leaflet-kart,  third-party API//
+// Initialisering av Leaflet-kart
     console.log("Initializing map with coordinates:", [60.30384351384949, 10.63625125343083]);
 
     const map = L.map("map").setView([60.30384351384949, 10.63625125343083], 10);
@@ -139,8 +122,34 @@ document.addEventListener("DOMContentLoaded", () => {
         attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
 
-     L.marker([60.30384351384949, 10.63625125343083])
+    L.marker([60.30384351384949, 10.63625125343083])
         .addTo(map)
         .bindPopup("Braastad Gård, Oppdalslinna 242, 2740 Roa")
         .openPopup();
+});
+
+  // === chatbot ===//
+document.querySelector('.send-message').addEventListener('click', function() {
+  var messageInput = document.querySelector('textarea');
+  var messageText = messageInput.value.trim();
+  
+  if (messageText) {
+      // Vis brukerens melding
+      var userMessage = document.createElement('div');
+      userMessage.classList.add('chat-message');
+      userMessage.innerHTML = '<div class="message-from">User:</div><p>' + messageText + '</p>';
+      document.querySelector('.chat-area').appendChild(userMessage);
+
+      // Vis svar fra chatbot
+      var botMessage = document.createElement('div');
+      botMessage.classList.add('chat-message');
+      botMessage.innerHTML = '<div class="message-from">FRAM:</div><p>Processing your request...</p>';
+      document.querySelector('.chat-area').appendChild(botMessage);
+
+      // Tøm tekstfeltet
+      messageInput.value = '';
+
+      // Rull ned for å vise nyeste meldinger
+      document.querySelector('.chat-area').scrollTop = document.querySelector('.chat-area').scrollHeight;
+  }
 });
