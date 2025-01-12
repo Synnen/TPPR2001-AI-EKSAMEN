@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css" /> <!-- Link til styles.css -->
 </head>
 <body class="chatbot-page">
+
     <!-- Header for Chatbot -->
     <header>
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
@@ -17,8 +18,17 @@
         </div>
     </header>
 
+     <!-- Meny  -->
+     <div class="side-menu">
+        <button class="close-btn">✕</button>
+        <a href="products.html">Products</a>
+        <a href="chatbot.html">Chat</a>
+        <a href="#">Checkout</a>
+    </div>
+
     <!-- Bakgrunnscontainer for chatboten -->
     <div class="chatbot-background">
+
         <!-- Chatbot Window -->
         <section class="chatbot-window">
             <div class="chat-header">
@@ -28,22 +38,19 @@
                 </div>
             </div>
 
-            <!-- Chat Area -->
-            <div class="chat-area">
+          <!-- Chat Area -->
+            <div id="chat-area" class="chat-area">
+                <!-- Static First Message from Chatbot -->
                 <div class="chat-message">
                     <div class="message-from">FRAM:</div>
-                    <p>What can I help you with today?</p>
-                </div>
-                <div class="chat-message">
-                    <div class="message-from">User:</div>
-                    <p>I want to know about the new produce available.</p>
+                    <p>Hello! What can I help you with today?</p>
                 </div>
             </div>
 
             <!-- Chat Input Area -->
             <div class="chat-input-area">
-                <textarea placeholder="Type your message..."></textarea>
-                <button class="send-message">Send</button>
+                <textarea id="message-input" placeholder="Type your message..."></textarea>
+                <button id="send-message" class="send-message">↑</button>
             </div>
         </section>
     </div>

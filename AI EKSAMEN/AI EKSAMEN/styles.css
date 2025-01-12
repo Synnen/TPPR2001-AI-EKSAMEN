@@ -685,3 +685,108 @@ button.send-message:hover {
 }
 
 
+/* GLOBAL RESPONSIVITET */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .cart-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .shop {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .shop-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .how-it-works-container {
+    grid-template-columns: 1fr; /* En kolonne på mobil */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .how-it-works-left {
+    border-right: none; /* Fjern linjen mellom seksjonene */
+    padding-right: 0;
+  }
+
+  .how-it-works-item {
+    border-bottom: none; /* Fjern linjen mellom elementene */
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* Én kolonne på mobil */
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+
+  .chatbot-window {
+    width: 100%; /* Full bredde på mobil */
+    max-width: 400px;
+    height: 60vh;
+    margin-bottom: 20px;
+  }
+
+  .chat-input-area {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  textarea {
+    width: 100%; /* Full bredde på mobil */
+  }
+
+  button.send-message {
+    width: 100%; /* Full bredde på mobil */
+    border-radius: 8px; /* Mindre radius på mobil */
+  }
+}
+
+/* FOR STØRRE SKJERMER */
+@media (min-width: 1024px) {
+  .shop {
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .how-it-works-container {
+    padding: 50px 10%;
+    grid-template-columns: 1fr 3fr; /* Venstre kolonne er smalere */
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 30px;
+    padding: 0 45px;
+  }
+
+  footer form {
+    flex-direction: row; /* Skjema på én linje */
+    gap: 10px;
+    justify-content: center;
+  }
+
+  footer input {
+    width: 300px; /* Begrens bredden */
+  }
+}
+
+
+
+
+
