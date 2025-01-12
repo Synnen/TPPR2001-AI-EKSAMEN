@@ -424,13 +424,16 @@ header {
 .product-page .products {
   margin-top: 140px; /* Juster avstand fra header */
   text-align: center; /* Sentrer overskriften */
+  padding: 0 45px; /* Legg til avstand fra nettsidens kant */
 }
 
 .product-page .products h2 {
   font-size: 36px;
   font-weight: bold;
-  color: #1B1A1E;
+  color: #0B0A08;
   margin-bottom: 40px; /* Avstand til produktlisten */
+  text-align: left; /* Valgfritt: Venstrejuster overskriften */
+  padding-left: 0; /* Fjern ekstra padding hvis nødvendig */
 }
 
 .product-page .products p {
@@ -441,13 +444,25 @@ header {
   margin-bottom: 10px; /* Avstand mellom paragrafene */
 }
 
+/* Produktliste */
 .product-page .product-list {
-  display: grid; /* Bruk grid layout */
+  display: grid; /*grid layout */
   grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
   gap: 29px; /* Avstand mellom produktene */
   justify-content: center; /* Sentrer produktene */
   max-width: 1400px; /* Maks bredde for produktgrid */
   margin: 0 auto; /* Sentrer grid */
+  padding: 0 45px; /* Avstand fra kantene */
+}
+
+/* Individuelt produkt */
+.product-page .product {
+  position: relative; /* Viktig for knappens posisjon */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Full bredde innenfor grid */
 }
 
 .product-page .product:nth-last-child(2),
@@ -473,13 +488,13 @@ header {
 
 .product-page .price {
   font-size: 16px;
-  color: #333;
+  color: #0B0A08;
   margin: 5px 0;
 }
 
 .product-page .product-weight {
   font-size: 14px;
-  color: #555;
+  color: #0B0A08;
 }
 
 /* Knapp inni bildet */
