@@ -113,20 +113,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-// Initialisering av Leaflet-kart
+ // Initialisering av Leaflet-kart
+ if (document.body.classList.contains("product-page")) {
+  if (typeof L !== 'undefined') {
     console.log("Initializing map with coordinates:", [60.30384351384949, 10.63625125343083]);
 
     const map = L.map("map").setView([60.30384351384949, 10.63625125343083], 10);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: "&copy; OpenStreetMap contributors",
+      attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
 
     L.marker([60.30384351384949, 10.63625125343083])
-        .addTo(map)
-        .bindPopup("Braastad Gård, Oppdalslinna 242, 2740 Roa")
-        .openPopup();
-});
+      .addTo(map)
+      .bindPopup("Braastad Gård, Oppdalslinna 242, 2740 Roa")
+      .openPopup();
+  } else {
+    console.error("Leaflet library is not loaded. Check your script imports.");
+  }
+}
 
   // === chatbot ===//
 document.querySelector('.send-message').addEventListener('click', function() {

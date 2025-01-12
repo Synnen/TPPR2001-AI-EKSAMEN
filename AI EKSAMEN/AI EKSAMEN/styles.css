@@ -32,6 +32,9 @@ header {
 .logo {
   font-size: 24px;
   text-align: center;
+  text-decoration: none; /* Fjerner understreking */
+  color: #000000; /* Velg ønsket farge */
+  font-size: 24px; /* Juster størrelsen */
 }
 
 .cart-icon {
