@@ -424,14 +424,14 @@ header {
 .product-page .products {
   margin-top: 140px; /* Juster avstand fra header */
   text-align: center; /* Sentrer overskriften */
-  padding: 0 45px; /* Legg til avstand fra nettsidens kant */
+  padding: 0 20px; /* Legg til avstand fra nettsidens kant */
 }
 
 .product-page .products h2 {
   font-size: 36px;
   font-weight: bold;
   color: #0B0A08;
-  margin-bottom: 40px; /* Avstand til produktlisten */
+  margin-bottom: 20px; /* Avstand til produktlisten */
   text-align: left; /* Valgfritt: Venstrejuster overskriften */
   padding-left: 0; /* Fjern ekstra padding hvis nødvendig */
 }
@@ -439,69 +439,66 @@ header {
 .product-page .products p {
   font-size: 16px; /* Juster fontstørrelse */
   line-height: 1.6; /* Bedre lesbarhet */
-  color: #333; /* Tekstfarge */
+  color: #1B1A1E; /* Tekstfarge */
   text-align: left; /* Venstrejuster teksten */
-  margin-bottom: 10px; /* Avstand mellom paragrafene */
+  margin-bottom: 20px; /* Avstand mellom paragrafene */
 }
 
 /* Produktliste */
 .product-page .product-list {
-  display: grid; /*grid layout */
-  grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
-  gap: 29px; /* Avstand mellom produktene */
-  justify-content: center; /* Sentrer produktene */
-  max-width: 1400px; /* Maks bredde for produktgrid */
-  margin: 0 auto; /* Sentrer grid */
-  padding: 0 45px; /* Avstand fra kantene */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamisk grid */
+  gap: 20px; /* Avstand mellom elementene */
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Juster padding for kantene */
 }
 
 /* Individuelt produkt */
 .product-page .product {
   position: relative; /* Viktig for knappens posisjon */
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%; /* Full bredde innenfor grid */
 }
 
-.product-page .product:nth-last-child(2),
-.product-page .product:nth-last-child(1) {
-  grid-column: span 1; /* Plasser to produkter på siste rad */
-}
 
 /* Bilder */
 .product-page .product img {
-  width: 432px; /* Fast bredde */
-  height: 432px; /* Fast høyde */
-  object-fit: cover; /* Beskjær bildet riktig */
+  width: 100%; /* Full bredde */
+  aspect-ratio: 1 / 1; /* Gjør bildet kvadratisk */
+  object-fit: cover; /* Beskjær bildet for å fylle kvadratet */
   border-radius: 8px; /* Runde hjørner */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Myk skygge */
+  margin-bottom: 10px; /* Avstand til teksten */
 }
 
 /* Tekst */
 .product-page .product-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   margin-top: 10px;
 }
 
 .product-page .price {
-  font-size: 16px;
+  font-size: 24px;
   color: #0B0A08;
   margin: 5px 0;
 }
 
 .product-page .product-weight {
-  font-size: 14px;
+  position: lef;
+  font-size: 20px;
   color: #0B0A08;
 }
 
 /* Knapp inni bildet */
 .product-page .add-to-basket {
   position: absolute; /* For å plassere knappen inni bildet */
-  bottom: 15px; /* Plasser nederst */
-  right: 15px; /* Plasser til høyre */
+   bottom: 50%;
+  left: 50%; /* Plasser til høyre */
   padding: 10px 20px;
   background: rgba(0, 0, 0, 0.8); /* Svart bakgrunn */
   color: white;
@@ -512,6 +509,8 @@ header {
   border-radius: 22px; /* Runde hjørner */
   cursor: pointer;
   transition: background-color 0.3s ease;
+  transform: translate(-50%, 50%); /* Plasser midt i bildet */
+  background: 0B0A08; 
 }
 
 .product-page .add-to-basket:hover {
