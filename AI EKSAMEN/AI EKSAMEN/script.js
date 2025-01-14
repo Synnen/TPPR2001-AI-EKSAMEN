@@ -8,19 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
   
-    // Open menu
+    // åpne meny
     menuToggle.addEventListener("click", () => {
       console.log("Opening menu...");
       sideMenu.classList.add("open");
     });
   
-    // Close menu
+    // lukke meny
     closeBtn.addEventListener("click", () => {
       console.log("Closing menu...");
       sideMenu.classList.remove("open");
     });
   
-    // Close menu when clicking outside
+    // lukk meny når klikker utenfor 
     document.addEventListener("click", (event) => {
       if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
         console.log("Clicked outside menu. Closing...");
@@ -84,35 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const sideMenu = document.querySelector(".side-menu");
-    const closeBtn = document.querySelector(".close-btn");
-  
-    if (!menuToggle || !sideMenu || !closeBtn) {
-      console.error("One or more elements are missing from the DOM.");
-      return;
-    }
-  
-    // Åpne meny
-    menuToggle.addEventListener("click", () => {
-      sideMenu.classList.add("open");
-    });
-  
-    // Lukke meny
-    closeBtn.addEventListener("click", () => {
-      sideMenu.classList.remove("open");
-    });
-  
-    // Lukk meny ved klikk utenfor
-    document.addEventListener("click", (event) => {
-      if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-        sideMenu.classList.remove("open");
-      }
-    });
-  });
-
-
  // Initialisering av Leaflet-kart
  if (document.body.classList.contains("product-page")) {
   if (typeof L !== 'undefined') {
@@ -133,6 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 }
 
+// === Chat-historikk for chatbot ===//
+let chatHistory = [{ role: "system", content: "You are a helpful assistant." }];
+
+
   // === chatbot ===//
 document.querySelector('.send-message').addEventListener('click', function() {
   var messageInput = document.querySelector('textarea');
@@ -145,6 +120,9 @@ document.querySelector('.send-message').addEventListener('click', function() {
       userMessage.innerHTML = '<div class="message-from">User:</div><p>' + messageText + '</p>';
       document.querySelector('.chat-area').appendChild(userMessage);
 
+       // Legg til meldingen i chat-historikken
+       chatHistory.push({ role: "user", content: messageText });
+
       // Vis svar fra chatbot
       var botMessage = document.createElement('div');
       botMessage.classList.add('chat-message');
@@ -156,5 +134,39 @@ document.querySelector('.send-message').addEventListener('click', function() {
 
       // Rull ned for å vise nyeste meldinger
       document.querySelector('.chat-area').scrollTop = document.querySelector('.chat-area').scrollHeight;
+         // Kall async-funksjonen for API-kall
+         sendMessageToOpenAI(botMessage);
   }
 });
+
+async function sendMessageToOpenAI(botMessage) {
+  try {
+      // Koble til OpenAI API
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer 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`
+          },
+          body: JSON.stringify({
+              model: "gpt-3.5-turbo",
+              messages: chatHistory // Send hele chat-historikken
+          })
+      });
+
+      const data = await response.json();
+
+      // Hent botens svar
+      const botReply = data.choices[0].message.content;
+
+      // Oppdater botens svar i chat-området
+      botMessage.querySelector('p').textContent = botReply;
+
+      // Legg botens svar til chat-historikken
+      chatHistory.push({ role: "assistant", content: botReply });
+
+  } catch (error) {
+      console.error('Error communicating with OpenAI:', error);
+      botMessage.querySelector('p').textContent = "Sorry, there was an error. Please try again later.";
+  }
+}
