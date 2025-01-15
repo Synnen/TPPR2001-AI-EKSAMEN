@@ -206,7 +206,6 @@ header {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.3s ease;
 }
 
 .shop .shop-item:first-child .buttons:hover {
@@ -397,45 +396,120 @@ header {
   background-color: rgba(0, 0, 0, 1); /* Lysere svart ved hover */
 }
   
-  /* Footer Section */
-  footer {
-    background-color: #DC4131; /* Samme røde farge */
-    color: white;
-    padding: 40px 20px;
-    display: flex; /* For å kunne justere innholdet */
-    flex-direction: column;
-    align-items: flex-start; /* Flytt alt til venstre */
-    gap: 20px; /* Avstand mellom elementene */
-  }
-
-  .footer-logo {
+ 
+/* Home Footer Styling */
+.home-footer {
+  background-color: #DC4131;
   color: white;
-  font-family: Frank Ruhl Libre;
-  font-weight: 300;
-  text-transform: uppercase;
-  display: flex; /* For å kunne justere innholdet */
+  padding: 40px 20px;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Flytt alt til venstre */
-  gap: 10px; /* Avstand mellom elementene */
+  align-items: flex-start;
+  gap: 20px;
 }
-  
-  footer h3 {
+
+.home-footer h3 {
   color: white;
   font-size: 36px;
   font-family: Arimo;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 36px;
-  word-wrap: break-word
-  }
-  
-  footer p {
+}
+
+.home-footer p {
   color: white;
   font-size: 20px;
   font-family: Frank Ruhl Libre;
   font-weight: 300;
-  word-wrap: break-word
-  }
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.footer-form input[type="text"],
+.footer-form input[type="email"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.send-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Full bredde */
+  padding: 10px;
+  background: #E1EAF0; /* Bakgrunnsfarge */
+  border: none; /* Ingen kantlinje */
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 10px; /* Mellomrom mellom elementer hvis flere */
+}
+
+.send-button:hover {
+  background-color: #d0dae0; /* Lysere grå ved hover */
+}
+
+.send-button-text {
+  text-align: center;
+  color: #0B0A08;
+  font-size: 16px;
+  font-family: Arimo, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* Product Footer */
+.product-footer {
+  background-color: #DC4131; /* Samme røde farge */
+  color: white;
+  padding: 40px 20px;
+  display: flex; /* For å kunne justere innholdet */
+  flex-direction: column;
+  align-items: flex-start; /* Flytt alt til venstre */
+  gap: 20px; /* Avstand mellom elementene */
+}
+
+.product-footer h3 {
+  color: white;
+  font-size: 36px;
+  font-family: Arimo;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 36px;
+  word-wrap: break-word;
+}
+
+.product-footer p {
+  color: white;
+  font-size: 20px;
+  font-family: Frank Ruhl Libre;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+.product-footer .footer-form button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #DC4131;
+}
+
+.product-footer .footer-form button::after {
+  content: '➔'; /* Pil-symbol */
+  font-size: 16px;
+  margin-left: 5px;
+}
+
 
   /* Container for skjema */
   .footer-form {
