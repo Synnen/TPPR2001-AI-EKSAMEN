@@ -29,7 +29,10 @@ en AI-drevet chatbot for kundeservice og et integrert kart som viser partnergår
   - Optimalisert for mobil, nettbrett og desktop.
 - **Tilgjengelighet:**
   - Oppfyller WCAG 2.1 nivå AA med full tastaturnavigasjon og ARIA-attributter.
-
+- **Footer:**
+- Footeren på nettsiden er designet for å gi brukerne en enkel og oversiktlig avslutning på hver side. 
+    Footeren inneholder selskapets logo "FRAM" og et skjema til brukerne slik at de kan holde seg oppdatert gjennom et nyhetsbrev.
+    Jeg vet at Footer ikke er helt riktig, men jeg klarte ikke å få det riktig...
 ---
 
 ## Teknologier Brukt

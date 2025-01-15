@@ -355,69 +355,81 @@ header {
   
   /* Footer Section */
   footer {
-    background-color: #E63946;
+    background-color: #DC4131; /* Samme røde farge */
     color: white;
-    text-align: center;
     padding: 40px 20px;
+    display: flex; /* For å kunne justere innholdet */
+    flex-direction: column;
+    align-items: flex-start; /* Flytt alt til venstre */
+    gap: 20px; /* Avstand mellom elementene */
   }
+
+  .footer-logo {
+  color: white;
+  font-family: Frank Ruhl Libre;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: flex; /* For å kunne justere innholdet */
+  flex-direction: column;
+  align-items: flex-start; /* Flytt alt til venstre */
+  gap: 10px; /* Avstand mellom elementene */
+}
   
   footer h3 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: white;
+  font-size: 36px;
+  font-family: Arimo;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 36px;
+  word-wrap: break-word
   }
   
   footer p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
+  color: white;
+  font-size: 20px;
+  font-family: Frank Ruhl Libre;
+  font-weight: 300;
+  word-wrap: break-word
   }
-  
-  footer form {
+
+  /* Container for skjema */
+  .footer-form {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
-  }
-  
-  footer input {
-    width: 80%;
+    align-items: flex-start; /* Flytt skjemaet til venstre */
+    gap: 10px; /* Avstand mellom felt */
     max-width: 400px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  footer button {
-    background-color: #FFFFFF;
-    color: #E63946;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  footer button:hover {
-    background-color: #F2F2F2;
+    margin-top: 20px; /* Legger til litt avstand over skjemaet */
   }
 
- .buttons {
-  border-radius: 8px;
-  background: #DC4131;
-  width: 320px;
-  height: 44px;
-  padding: 10px 16px;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-color: #DC4131;
-  margin-bottom: auto;
-  margin-right: auto;
-  font-size: 16px;
- } 
-
+  .footer-form label {
+    color: rgba(gba 0, 0, 0, 0.60); 
+    font-size: 16px;
+    font-family: "Helvetica Neue", sans-serif;
+  }
+  
+  footer input[type="text"],
+  footer input[type="email"] {
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.6);
+      flex: 1; /* Sørger for at feltene vokser riktig */
+  }
+  
+  .footer-form .send-button {
+     display: flex;
+    flex-direction: column; /* Sørger for at feltene er under hverandre */
+    align-items: flex-start; /* Justerer tekstfeltene til venstre */
+    gap: 15px; /* Avstand mellom feltene */
+    width: 100%; /* Full bredde innenfor footer */
+  }
 
 /* CSS for Product Page */
 /* Produktside-seksjon */

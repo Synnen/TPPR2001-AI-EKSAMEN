@@ -28,6 +28,37 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  //== formvalidering footer==//
+  document.querySelector('#contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Stopper skjemaet fra å sendes
+
+    // Hent verdiene fra inputfeltene
+    const firstName = document.querySelector('#first-name').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const errorDiv = document.querySelector('#form-errors');
+    let errors = [];
+
+    // Sjekk om fornavn er tomt
+    if (firstName === '') {
+        errors.push('First name is required.');
+    }
+
+    // Sjekk om e-post er gyldig
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        errors.push('Please enter a valid email address.');
+    }
+
+    // Hvis det er feil, vis dem
+    if (errors.length > 0) {
+        errorDiv.textContent = errors.join(' ');
+    } else {
+        errorDiv.textContent = '';
+        alert('Form submitted successfully!');
+        // Her kan du sende skjemaet til serveren (f.eks. med fetch())
+    }
+});
   
 // === Dynamisk produktgenerering ===
   const products = [
