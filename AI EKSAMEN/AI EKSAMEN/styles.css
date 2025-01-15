@@ -285,10 +285,13 @@ header {
 }
 
 .how-it-works-link {
-  color: #E63946;
+  color: rgba(0, 0, 0, 0.70);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Elza;
+  text-decoration: underline;
+  word-wrap: break-word
 }
 
   
