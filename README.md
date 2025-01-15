@@ -105,11 +105,12 @@ Etter mange forsøk fikk jeg en løsning som gir brukerne enkle, men relevante s
 - Optimalisering av design og ytelse:
     Finjustere designet for å sikre fullstendig samsvar med Figma-spesifikasjonen.
     Optimalisere bilder og minimere CSS/JS-filer for raskere lastetider.
-- Robust feilhåndtering:
+- Feilhåndtering:
     Implementere bedre feilhåndtering for API-kall og gi brukerne tydeligere feilmeldinger ved problemer.
 - Testing og tilbakemeldinger:
     Utføre grundigere testing på ulike enheter og nettlesere.
     Inkludere tilbakemeldinger fra brukere for å identifisere svakheter og forbedringsområder.
+    Hadde jeg hatt bedre tid ville jeg bedt om kodegjennomgang av en annen student, og ville prøvd å hjulpet en annen student med kodegjennomgang (selvom jeg ikke helt vet hva jeg skulle sett på). Men jeg har hatt kontakt med to andre studenter og vi har hjulpet hverandre gjennom dette prosjektet, så det har vært til hjelp for alle parter. 
 
 
 ### Referanser
