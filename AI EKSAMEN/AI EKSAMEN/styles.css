@@ -190,6 +190,50 @@ header {
     line-height: 36px; /* 100% */
     text-transform: uppercase;
   }
+
+  /* Styling for "Browse our selection"-knappen */
+.shop .shop-item:first-child .buttons {
+  color: white;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  background: #DC4131;
+  border-radius: 8px;
+  padding: 10px 20px; /* Justerer størrelsen */
+  border: none; /* Fjerner kantlinje */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.shop .shop-item:first-child .buttons:hover {
+  background: #E76A58; /* Lysere rød ved hover */
+}
+
+/* Styling for "Go to Chat"-knappen */
+.shop .shop-item:last-child .buttons {
+  color: white;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  background: #DC4131;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.shop .shop-item:last-child .buttons:hover {
+  background: #E76A58; /* Lysere rød ved hover */
+}
+
   
   /* Section: How It Works */
 .how-it-works-container {
