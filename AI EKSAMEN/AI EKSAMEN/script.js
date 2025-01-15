@@ -146,7 +146,7 @@ async function sendMessageToOpenAI(botMessage) {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
-              'Authorization': `Bearer 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`
+              'Authorization': `Bearer YOUR_API_KEY`
           },
           body: JSON.stringify({
               model: "gpt-3.5-turbo",
